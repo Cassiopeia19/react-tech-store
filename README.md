@@ -1,4 +1,4 @@
-## URL to view project, as it changes, is:  
+## URL to view the output of this project, as it changes, is:  
 ## react-tech-store1.netlify.com
 
 
