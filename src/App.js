@@ -2,24 +2,21 @@ import React, {Component} from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import {FaHome} from 'react-icons/fa';
-import styled from 'styled-components';
+import Home from './pages/HomePage'
+import About from './pages/AboutPage'
+import Products from './pages/ProductsPage'
+import Contact from './pages/ContactPage'
+import SingleProduct from './pages/SingleProductPage'
+import Default from './pages/Default'
+
+
 
 class App extends Component {
   render() {
     return <h1>
-      hello from tech store<FaHome />
-      <Button large>hello styled-components</Button>
+      hello from tech store />
       </h1>
   }
 }
-
-const color = '#f15025';
-const Button = styled.button `
-color: white;
-background: ${color};
-
-font-size: ${(props) => props.large? '3rem': '1rem'};
-`;
 
 export default App;
