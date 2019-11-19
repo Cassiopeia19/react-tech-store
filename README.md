@@ -1,5 +1,5 @@
-##URL to view project, as it changes, is:  
-##react-tech-store1.netlify.com
+## URL to view project, as it changes, is:  
+## react-tech-store1.netlify.com
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
