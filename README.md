@@ -1,7 +1,3 @@
-## URL to view the output of this project, as it changes, is:  
-## react-tech-store1.netlify.com
-
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
