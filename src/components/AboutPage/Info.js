@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../Title";
-import aboutBcg from "../../images/aboutBcg.jpeg";
+import aboutBcg from "../../pageImages/aboutBcg.jpeg";
 export default function Info() {
     return (
         <section className="py-5">
