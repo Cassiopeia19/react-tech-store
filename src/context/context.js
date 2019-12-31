@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import {linkData} from './linkData';
-import { socialData } from './socialData';
-import {items} from '../context/productData';
+import { linkData } from "./linkData";
+import { socialData } from "./socialData";
+import { items } from "./productData";
 
 const ProductContext = React.createContext();
 //Provider
@@ -14,16 +14,15 @@ class ProductProvider extends Component {
     socialIcons: socialData,
     cart: [],
     cartItems: 0,
-    cartSubtotal: 0,
+    cartSubTotal: 0,
     cartTax: 0,
-    cartTotal: 0,
+    carTotal: 0,
     storeProducts: [],
     filteredProducts: [],
     featuredProducts: [],
     singleProduct: {},
     loading: false
   };
-
   componentDidMount() {
     //from contentful items
 
@@ -36,10 +35,10 @@ class ProductProvider extends Component {
     let storeProducts = products.map(item => {
       const { id } = item.sys;
       const image = item.fields.image.fields.file.url;
-      const product = { id, ...item.fields,image };
+      const product = { id, ...item.fields, image };
       return product;
     });
-    // featured products
+    //  featured products
     let featuredProducts = storeProducts.filter(item => item.featured === true);
     this.setState({
       storeProducts,
@@ -47,47 +46,37 @@ class ProductProvider extends Component {
       featuredProducts,
       cart: this.getStorageCart(),
       singleProduct: this.getStorageProduct(),
-      lodaing: false
+      loading: false
     });
   };
-
-  //get cart from local storage
+  // get cart from local storage
   getStorageCart = () => {
     return [];
   };
-
-  //get product from local storage
+  // get product from local storage
   getStorageProduct = () => {
-    return [];
+    return {};
   };
-
-  //get totals
+  // get totals
   getTotals = () => {};
-
   //add totals
   addTotals = () => {};
-
-//sync storage
-syncStorage = () => {
-
-}
-
-//add to cart
-addToCart = (id) => {
-  console.log(`add to cart ${id}`);
-}
-
-//set single product
-setSingleProduct = (id) => {
-  console.log(`set single product ${id}`);
-}
-
+  // sync storage
+  syncStorage = () => {};
+  //add to cart
+  addToCart = id => {
+    console.log(`add to cart ${id}`);
+  };
+  // set single product
+  setSingleProduct = id => {
+    console.log(`set single product ${id}`);
+  };
 
   // handle sidebar
   handleSidebar = () => {
     this.setState({ sidebarOpen: !this.state.sidebarOpen });
   };
-  // handle sart
+  // hanldle sart
   handleCart = () => {
     this.setState({ cartOpen: !this.state.sidebarOpen });
   };
